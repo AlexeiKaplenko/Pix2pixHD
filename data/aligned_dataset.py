@@ -13,8 +13,8 @@ class AlignedDataset(BaseDataset):
         self.root = opt.dataroot    
 
         ### input A (label maps)
-        dir_A = '_A' if self.opt.label_nc == 0 else '_label'
-        self.dir_A = os.path.join(opt.dataroot, opt.phase + dir_A)
+        dir_A = '_A_white_background' if self.opt.label_nc == 0 else '_label' #!!! '_A'
+        self.dir_A = os.path.join(opt.dataroot, opt.phase + dir_A) 
 
         self.A_paths = []
     
